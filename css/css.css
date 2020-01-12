@@ -1,19 +1,24 @@
 /*===== ÍNDICE =====*/
 
 /*
-====PC====
+====ATALHOS====
 
 00 - REGRA GERAL
+05 - FOOTER
+
+====PC====
+
 01 - MENU
 02 - INICIO
 03 - PERFIL
 04 - PUBLICAÇOES
-05 - FOOTER
 
 ====TABLET====
 
 06 - MENU
 07 - INICIO
+08 - PERFIL
+09 - PUBLICAÇOES
 */
 
 
@@ -463,9 +468,42 @@ botao li a {
 }
 /*===== END =====*/
 
+/*===== PERFIL 08 =====*/
+.perfil-painel{ /*Painel geral*/
+  width: 100%; /*Tamanho largura*/
+  height: 220px; /*Tamanho altura*/
+  margin:0 0%; /*retirar margem*/
+}
+.perfil-painel .avatar{ /*Imagem de perfil*/
+  width: 180px; /*Tamanho largura*/
+  height: 180px; /*Tamanho altura*/
+}
+.perfil-painel h1{ /*Texto centrado*/
+  left:44%;
+  top:180px;
+}
+.perfil-menu{ /*Barra a baixo*/
+  width: 80%;
+}
+.perfil-esquerdo{
+  margin-left:10%; /*Espaçamemto entre imagens*/
+}
+.perfil-galeria{  /*Posicionamento centrado*/
+  width: 70%; 
+}
+.perfil-galeria img{ /*Imagens*/
+  width: 30%; margin-right: 1%;   
+} 
+/*===== END =====*/
 
-
-
+/*===== PUBLICAÇOES 09 =====*/
+.pub p {
+  font-size: 17px;  /* Tamanho do texto*/
+}
+.pub img{
+  width: 25%;
+}
+/*===== END =====*/
 
 
 }
