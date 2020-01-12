@@ -40,7 +40,7 @@ background: #ffffff; /* Cor do background geral */
 }
 main{  /*Caixa criada para o conteudo geral*/
   width: 100%; /*Tamanho largura da caixa*/
-  height: 905px; /*Tamanho em altura da caixa*/
+  min-height: 905px; /*Tamanho em altura da caixa*/
 }
 .box{
   width: 80%;
@@ -80,6 +80,8 @@ main{  /*Caixa criada para o conteudo geral*/
 .hidden {
   display: none;
 }
+
+
 /*===== END =====*/
 
 /*===== MENU ===== 01 */
@@ -319,11 +321,31 @@ footer {
   float: left;
 }
 .esquerda-footer img{
-  width: 20%;
+  max-width: 20%;
   margin-top:-20px;
-  margin-left: 1.5%;
+}
+footer h1 {
+  font-size: 80%;
+}
+footer h2 {
+  font-size: 60%;
 }
 /*===== END =====*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -337,6 +359,10 @@ footer {
 @media screen and (max-width: 1150px) {
 
 /*===== MENU 06 =====*/
+.esquerda-footer img{
+  max-width: 30%;
+  margin-top:-20px;
+}
 .botao-wrapper {
   position: fixed; 
   top: 0;
@@ -539,7 +565,10 @@ botao li a {
 @media screen and (max-width: 650px) {
 
   /*===== MENU 10 =====*/
-
+  .esquerda-footer img{
+    max-width: 60%;
+    margin-top:-10px;
+  }
 /*===== INICIO 07 =====*/
 .caixad { display:none;}
 .hex {  /*Imagens dos hexagonos*/

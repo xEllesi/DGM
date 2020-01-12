@@ -1,4 +1,8 @@
-
+.limpa{clear: both !important; display: block; height: 80px; float:left; width: 100%;}
+.box h1{border-left: 4px solid #F8981D; text-transform: capitalize; font-weight: bold; margin: 30px 0; display: block;}
+.box h2{text-transform: capitalize; margin:10px 0; padding: 0;}
+.box h3{margin:25px 0; font-size: 16px; font-weight: normal;}
+.box .coluna-2{float: left; width: 50%; height: 170px;}
 .avatar-mini{
   width: 20%;
   float: left;
@@ -6,7 +10,87 @@
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 .avatar-mini img{
-  width: 100%;
+  width: 99%;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.avatar-micro{
+  width: 10%;
+  float: left;
+  background-color: black;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.avatar-micro img{
+  width: 99%;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 .coluna-2 .informacoes{width: 78%; float: left; margin-left: 10px; margin-top: 45px;}
+/*=====PAGINA EXPOSIÇÃO=====*/
+.coluna-2-max{width: 80%; float: left;}
+.coluna-2-min{width: 20%; float: left;}
+.form{width: 100%; margin: 10px 0; height: 30px;}
+.form input{ 
+  width: 80%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px;
+  float: left;
+}
+.form .btn-img{ 
+  widows: 20%;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+  cursor: pointer;
+}
+.form .btn-img img{width: 25px;float: left;}
+.tag{
+  display: block;
+  height: 400px;
+  background-color: #F8981D; 
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.tag h1{border-left: none; color: white; font-weight: normal; font-size: 14px; padding-top: 10px; margin-bottom: 10px;}
+.tag-left, .tag-right{color: white; width: 48%; float: left; margin-bottom: 10px;} 
+.tag-left{ margin-left: 5px;}
+.tag-right{text-align: right;}
+.img-project{
+  width: 80%;
+  height: 400px;
+  overflow: hidden; 
+  border-radius: 10px;
+  margin-left: 5px;
+}
+.img-informacao{ width: 100%; margin-bottom: 20px;}
+.preto{background-color: black;} /* utilizado para colocar o fundo a preto e entender limites, apenas para debug*/
+.altura-1{height: 60px !important;}
+.altura-4{height: 400px !important;}
+.mt-2{margin-top: 15px;}
+
+@media screen and (max-width: 900px) {
+.limpa {height: 200px}
+.tag {display: none;}
+.coluna-2-max{width: 100%; float: left;}
+.coluna-2-min{width: 70%; float: left;}
+.altura-4{height: 300px !important;}
+.form input{ 
+  display: none;
+}
+.form .btn-img{ 
+display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .coluna-2-max{width: 100%; float: left;}
+  .img-project{
+    height: 300px;   
+  }
+
+}
+}
