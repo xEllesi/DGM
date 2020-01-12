@@ -301,6 +301,94 @@ h2 {
 
 @media screen and (max-width: 1150px) {
 /*===== BARRA MOBILE 06 =====*/
+
+.botao-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.2s ease;
+  background: #F8981D;
+}
+.botao-wrapper ul {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+  width: 0%;
+}
+
+.botao-wrapper ul li {
+  display: block;
+  float: none;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+.botao-wrapper ul li:nth-child(1) a {
+  transition-delay: 0.2s;
+}
+.botao-wrapper ul li:nth-child(2) a {
+  transition-delay: 0.3s;
+}
+.botao-wrapper ul li:nth-child(3) a {
+  transition-delay: 0.4s;
+}
+.botao-wrapper ul li:nth-child(4) a {
+  transition-delay: 0.5s;
+}
+.botao-wrapper ul li:not(:first-child) {
+  margin-left: 0;
+}
+
+.botao-wrapper ul li a {
+  padding: 10px 24px;
+  opacity: 0;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  transform: translateX(-20px);
+  transition: all 0.2s ease;
+}
+
+.botao-device {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 9999;
+  border-radius: 50%;
+}
+
+.botao-device i {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: rgb(0,0,0);
+  border-radius: 2px;
+  margin-left: 14px;
+}
+
+.botao-device i:nth-child(1) {
+  margin-top: 16px;
+}
+
+.botao-device i:nth-child(2) {
+  margin-top: 4px;
+  opacity: 1;
+}
+
+.botao-device i:nth-child(3) {
+  margin-top: 4px;
+}
 menu{
   height: 0; /* Espaço entre o topo */
   background-color: #F8981D; /* Cor de fundo */
@@ -320,27 +408,19 @@ botao li a {
   text-transform: uppercase; /* Letras transformadas em capslock */
   line-height: 50px ; /* Onde se alinham */
 }
- botao li a:hover{ display: none;}
 .esquerda-logo { display: none;}
 .esquerda-logo img{ display: none;}
-.esquerda-menu { display: none;}
+.esquerda-menu { display: none !important;}
 
 
 
 
 
-.botao-wrapper {
-  position: fixed;
-  width: 100%;  /* Tamanhos */
-  height: 100%;
-  z-index: -1;
-  opacity: 0;
-  background: #F8981D;
-}
 #botao:checked + .botao-device { /* Formato de x */
   transform: rotate(45deg);
 }
-#botao:checked + .botao-device i { 
+
+#botao:checked + .botao-device i {
   background: rgb(255, 255, 255); /* Cor das linhas x */
   transition: transform 0.2s ease; /* tempo de transformação x */
 }
@@ -349,104 +429,25 @@ botao li a {
   transform: translateY(6px) rotate(180deg); /* rotação*/
 }
 
-#botao:checked + .botao-device i:nth-child(2) { /* linha 2*/
+#botao:checked + .botao-device i:nth-child(2) { /* Linha 2*/
   opacity: 0; /* Desaparece ao clicar*/
 }
 
-#botao:checked + .botao-device i:nth-child(3) { /* linha 3*/
+#botao:checked + .botao-device i:nth-child(3) {  /* linha 3*/
   transform: translateY(-6px) rotate(90deg); /* rotaçao */
 }
 
 #botao:checked ~ .botao-wrapper {
   z-index: 9990; /* Prioridade sobre a página */
-  opacity: 1; 
+  opacity: 1;
 }
-#botao:checked  .botao-wrapper ul li a {
+
+#botao:checked ~ .botao-wrapper ul li a {
   opacity: 1;  /* Background aparece*/
+  transform: translateX(0);
 }
 
-
-
-
-
-  .botao-wrapper ul {
-        position: absolute;
-        top: 50%;
-        left: 20%;
-        transform: translateY(-50%);
-        width: 0%;
-  }
-
-  .botao-wrapper ul li {
-        display: block;
-        float: none;
-        text-align: center;
-        margin-bottom: 10px;
-
-  }
-
-  .botao-wrapper ul li:nth-child(1) a {
-        transition-delay: 0.2s;
-  }
-
-  .botao-wrapper ul li:nth-child(2) a {
-        transition-delay: 0.3s;
-  }
-
-  .botao-wrapper ul li:nth-child(3) a {
-        transition-delay: 0.4s;
-  }
-
-  .botao-wrapper ul li:nth-child(4) a {
-        transition-delay: 0.5s;
-  }
-
-  .botao-wrapper ul li:not(:first-child) {
-        margin-left: 0;
-  }
-
-  .botao-wrapper ul li a {
-        padding: 10px 24px;
-        opacity: 0;
-        color: rgb(255, 255, 255);
-        font-size: 14px;
-        font-weight: 600;
-        letter-spacing: 1.2px;
-        transform: translateX(-20px);
-        transition: all 0.2s ease;
-  }
-
-  .botao-device {
-        position: fixed;
-        right: 10px;
-        top: 10px;
-        display: block;
-        width: 48px;
-        height: 48px;
-        cursor: pointer;
-        z-index: 9999;
-        border-radius: 50%;
-  }
-
-  .botao-device i {
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: rgb(0,0,0);
-        border-radius: 2px;
-        margin-left: 14px;
-  }
-
-  .botao-device i:nth-child(1) {
-        margin-top: 16px;
-  }
-
-  .botao-device i:nth-child(2) {
-        margin-top: 4px;
-        opacity: 1;
-  }
-
-  .botao-device i:nth-child(3) {
-        margin-top: 4px;
-  }
+.hidden {
+  display: none;
+}
 }
