@@ -1,4 +1,16 @@
-/*===== REGRA GERAL =====*/
+/*===== ÍNDICE =====*/
+
+/*
+00 - REGRA GERAL
+01 - MENU
+02 - INICIO
+03 - PERFIL
+04 - PUBLICAÇOES
+05 - FOOTER
+*/
+
+
+/*===== REGRA GERAL ===== 00 */ 
 * { /* Reset css */
   margin: 0; /* Margem geral resetada */
   padding: 0; /* Padding geral resetado */
@@ -12,9 +24,13 @@ main{  /*Caixa criada para o conteudo geral*/
   height: 905px; /*Tamanho em altura da caixa*/
 }
 .box{width: 80%;margin:0 auto;}
+
+.hidden {
+  display: none;
+}
 /*===== END =====*/
 
-/*===== MENU =====*/
+/*===== MENU ===== 01 */
 menu{
   height: 50px; /* Espaço entre o topo */
   background-color: #F8981D; /* Cor de fundo */
@@ -59,7 +75,7 @@ botao li a {
 }
 /*===== END =====*/
 
-/*===== INICIO =====*/
+/*===== INICIO 02 =====*/
 .caixae, .caixad {   /*caixas direita e esquerda dos hexagonos laterais*/
   width: 15%; /*Tamanho largura das caixas*/
   height: 900px; /*Tamanho altura das caixas*/
@@ -137,7 +153,7 @@ botao li a {
 }
 /*===== END =====*/
 
-/*===== PERFIL =====*/
+/*===== PERFIL 03 =====*/
 .perfil-painel{ /*Painel geral*/
   background-color: #F8981D;
   width: 80%; /*Tamanho largura*/
@@ -218,10 +234,9 @@ botao li a {
 .hidden {
   display: none;
 }
-
 /*===== END =====*/
 
-/*===== PUBLICAÇOES =====*/
+/*===== PUBLICAÇOES 04 =====*/
 .ColabTitle p {
   margin-top: 50px;
   font-size: 5px;   /* Tamanho do texto*/
@@ -240,6 +255,45 @@ botao li a {
   border-bottom-right-radius: 10px;
 }
 /*===== END =====*/
+
+/*===== FOOTER 05 =====*/
+footer {
+  clear: both; /* limpa alterações até ao momento*/
+  display: block; /* Ocupar toda a caixa*/
+  background-color: white;
+  border-top: 5px solid #F8981D;
+}
+.direita-footer, .esquerda-footer{
+  width: 48%;
+  margin: 2% 1%;
+  float: left;
+}
+.esquerda-footer img{
+  width: 20%;
+  margin-top:-20px;
+  margin-left: 1.5%;
+}
+/*===== END =====*/
+
+
+h1 {
+  padding-left: 3%;
+  font-family: sans-serif;
+  color: #F8981D;
+  font-size: 120%;
+  letter-spacing: 2px;
+  padding-right: 15%;
+}
+h2 {
+  padding-left: 3%;
+  font-family: sans-serif;
+  color: #F8981D;
+  font-size: 100%;
+  padding-right: 15%;
+}
+
+
+
 
 
 
@@ -277,62 +331,10 @@ botao li a {
   transform: translateX(0);
 }
 
-.hidden {
-  display: none;
-}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-h1 {
-  padding-left: 3%;
-  font-family: sans-serif;
-  color: #F8981D;
-  font-size: 120%;
-  letter-spacing: 2px;
-  padding-right: 15%;
-}
-h2 {
-  padding-left: 3%;
-  font-family: sans-serif;
-  color: #F8981D;
-  font-size: 100%;
-  padding-right: 15%;
-}
-footer {
-  background-color: white;
-  border-top: 5px solid #F8981D;
-}
-.direita-footer, .esquerda-footer{
-  width: 48%;
-  margin: 2% 1%;
-  float: left;
-}
-.esquerda-footer img{
-  width: 20%;
-  margin-top:-20px;
-  margin-left: 1.5%;
-}
 
 @media screen and (max-width: 1150px) {
 
