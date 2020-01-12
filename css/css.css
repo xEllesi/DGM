@@ -235,6 +235,7 @@ botao li a {
 }
 .pub img{
   float: left;
+  width: 15%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
