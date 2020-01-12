@@ -7,6 +7,7 @@
 03 - PERFIL
 04 - PUBLICAÇOES
 05 - FOOTER
+06 - BOTÃO MOBILE
 */
 
 
@@ -298,56 +299,48 @@ h2 {
 
 
 
-
-
-#botao:checked + .botao-device {
+@media screen and (max-width: 1150px) {
+/*===== BOTÃO MOBILE 06 =====*/
+#botao:checked + .botao-device { /* Formato de x */
   transform: rotate(45deg);
 }
-
-#botao:checked + .botao-device i {
-  background: rgb(255, 255, 255);
-  transition: transform 0.2s ease;
+#botao:checked + .botao-device i { 
+  background: rgb(255, 255, 255); /* Cor das linhas x */
+  transition: transform 0.2s ease; /* tempo de transformação x */
 }
 
-#botao:checked + .botao-device i:nth-child(1) {
-  transform: translateY(6px) rotate(180deg);
+#botao:checked + .botao-device i:nth-child(1) { /* Linha 1*/
+  transform: translateY(6px) rotate(180deg); /* rotação*/
 }
 
-#botao:checked + .botao-device i:nth-child(2) {
-  opacity: 0;
+#botao:checked + .botao-device i:nth-child(2) { /* linha 2*/
+  opacity: 0; /* Desaparece ao clicar*/
 }
 
-#botao:checked + .botao-device i:nth-child(3) {
-  transform: translateY(-6px) rotate(90deg);
+#botao:checked + .botao-device i:nth-child(3) { /* linha 3*/
+  transform: translateY(-6px) rotate(90deg); /* rotaçao */
 }
 
 #botao:checked ~ .botao-wrapper {
-  z-index: 9990;
-  opacity: 1;
+  z-index: 9990; /* Prioridade sobre a página */
+  opacity: 1; 
 }
-
 #botao:checked  .botao-wrapper ul li a {
-  opacity: 1;
-  transform: translateX(0);
+  opacity: 1;  /* Background aparece*/
 }
 
 
 
-
-
-
-@media screen and (max-width: 1150px) {
-
-  .botao-wrapper {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0;
-      transition: all 0.2s ease;
-      background: #F8981D;
+.botao-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.2s ease;
+    background: #F8981D;
   }
 
   .botao-wrapper ul {
