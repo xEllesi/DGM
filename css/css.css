@@ -9,7 +9,7 @@ background: #ffffff; /* Cor do background geral */
 /* Navegador */
 menu{
   height: 50px; /* Espaço entre o topo */
-  background-color: #CCCCCC;
+  background-color: #F8981D;
   z-index: 10;
 }
 botao ul{ 
@@ -22,7 +22,7 @@ botao li {
   margin-left: 40px; /* Margem da esquerda */
 } 
 botao li a {
-  color: #F8981D;
+  color: #ffffff;
   font-family: sans-serif;
   text-decoration: none;
   text-transform: uppercase;
