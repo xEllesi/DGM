@@ -84,14 +84,13 @@ botao li a {
   position: relative; /*Posicionado ao centro*/
 }
 .hex {  /*Imagens dos hexagonos*/
-
-  width: 20%;
-  height: calc(30%);
-  position: absolute;
+  width: 20%; /*Tamanho da caixa largura*/
+  height: calc(30%); /*Tamanho da caixa altura*/
+  position: absolute; /*Posiçao das caixas*/
 }
 .Hexagono{ /* Propriedades dos hexagonos da galeria */
-  width: 100%;   
-  height: calc(100%);
+  width: 100%; /*Tamanho em altura*/
+  height: calc(100%); /*Tamanho em largura*/
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%,0% 75%, 0% 25%); /* Shape da border */
   padding:5px; /* Tamanho da linha da border */
   background: #F8981D; /* Cor da border */
@@ -99,48 +98,114 @@ botao li a {
   cursor:pointer; /* Tipo de cursor a passar por cima */
 }
 .Galeria .hex .Hexagono img{ /* Shape das imagens */
-  width: 100%;
-  height: calc(100%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  width: 100%; /*Tamanho em altura*/
+  height: calc(100%); /*Tamanho em largura*/
 }
 .hex:hover{ /* Quando passa por cima aumenta tamanho */
   transform:scale(1.2); /* Tamanho a aumentar */
   transition:transform 0.2s; /* Tempo que demora a diminuir */
   z-index:10; /* Prioridade */
 }
-
-.hex:nth-child(1){
+.hex:nth-child(1){ /*Hexagono 1 posição*/
   top:10%;
   left:5.5%;
-
 }
-.hex:nth-child(2){
+.hex:nth-child(2){ /*Hexagono 2 posição*/
   top:33%;
   left:16%;
 }
-
-.hex:nth-child(3){
+.hex:nth-child(3){ /*Hexagono 3 posição*/
   top:56%;
   left:5.5%;
 }
-
-.hex:nth-child(4){
+.hex:nth-child(4){ /*Hexagono 4 posição*/
   top:56%;
   left:26.5%;
 }
-
-.hex:nth-child(5){
+.hex:nth-child(5){ /*Hexagono 5 posição*/
   top: 10%;
   left:68.5%;
 }
-.hex:nth-child(6){
+.hex:nth-child(6){ /*Hexagono 6 posição*/
   top:56%;
   left:68.5%;
 }
-.hex:nth-child(7){
+.hex:nth-child(7){ /*Hexagono 7 posição*/
   top:33%;
   left:58%;
 }
+/*===== END =====*/
+
+/*===== PERFIL =====*/
+.perfil-painel{ /*Painel geral*/
+  background-color: #F8981D;
+  width: 80%; /*Tamanho largura*/
+  height: 250px; /*Tamanho altura*/
+  border-bottom-left-radius: 10px; /*Acabamento circular esquerda*/
+  border-bottom-right-radius: 10px; /*Acabamento circular direita*/
+  margin:0 10%; /*Margem à direita*/
+}
+.perfil-painel .avatar{ /*Imagem de perfil*/
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /*Shape da imagem*/
+  background-color: #ffffff; /*Cor do background*/
+  width: 180px; /*Tamanho largura*/
+  height: 200px; /*Tamanho altura*/
+  margin: auto; /*Centrado*/
+}
+.perfil-painel .avatar img{
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /*Shape da imagem*/
+  width: 99%; /*Tamanho da imagem*/
+  height: 99%; /*Tamanho da imagem*/
+}
+.perfil-painel h1{ /*Texto centrado*/
+  position: absolute;
+  margin: auto;
+  left:45%;
+  top:250px;
+  color:#fff;
+}
+.perfil-painel h2{ /*Texto centrado*/
+  position: absolute;
+  margin: auto;
+  left:45%;
+  top:270px;
+  color:#fff;
+}
+.perfil-menu{ /*Barra a baixo*/
+  margin: 20px auto ;
+  background-color: #F8981D;
+  width: 50%;
+  height: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+  line-height: 50px;
+}
+.perfil-menu a{ /*Texto*/
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color:#ffffff;  
+}
+.perfil-esquerdo{
+  float: left; /*Alinhado à esquerda*/
+  margin-left:20px; /*Espaçamemto entre imagens*/
+}
+.perfil-direito{float: right;margin-right:50px;} /*Espaçamento*/
+.perfil-galeria{ width: 80%; margin:0 auto; } /*Posicionamento centrado*/
+.perfil-galeria h1 a{ text-decoration: none; color:#000000;} /*Texto*/
+.perfil-galeria img{ margin-top: 10px; width: 30%; margin-right: 3%;} /*Imagens*/
+/*===== END =====*/
+
+
+
+
+
+
+
+
 
 
 #botao:checked + .botao-device {
@@ -178,66 +243,6 @@ botao li a {
   display: none;
 }
 
-/*===== PERFIL =====*/
-.perfil-painel{
-  background-color: blueviolet;
-  width: 80%;
-  height: 250px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  margin:0 10%;
-}
-.perfil-painel .avatar{
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background-color: #000000;
-  position: absolute;
-  left:45%;
-  width: 10%;
-  height: 25%;
-}
-.perfil-painel .avatar img{
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  width: 99%;
-  height: 99%;
-}
-.perfil-painel h1{
-  position: absolute;
-  left:45%;
-  top:32%;
-  color:#fff;
-}
-.perfil-painel h2{
-  position: absolute;
-  left:45%;
-  top:36%;
-  color:#fff;
-}
-.perfil-menu{
-  margin:10px auto ;
-  background-color: blueviolet;
-  width: 50%;
-  height: 50px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-text-align: center;
-line-height: 50px;
-}
-.perfil-menu a{
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  color:#ffffff;  
-}
-.perfil-esquerdo{
-  float: left;
-  margin-left:20px;
-}
-.perfil-direito{float: right;margin-right:20px;}
-.perfil-galeria{ width: 80%; margin:0 auto; }
-.perfil-galeria h1 a{ text-decoration: none; color:#000000;}
-.perfil-galeria img{ margin-top: 10px; width: 30%; margin-right: 3%;}
 
 
 
