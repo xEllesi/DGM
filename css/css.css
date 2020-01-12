@@ -216,9 +216,28 @@ botao li a {
 } 
 /*===== END =====*/
 
+/*===== PUBLICAÇOES =====*/
+.pub {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
 
-
-
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.pub img{
+  float: left;
+  margin-top: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/*===== END =====*/
 
 
 
