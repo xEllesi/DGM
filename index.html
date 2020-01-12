@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Página Inicial</title> <!--Título da pagina-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/css.css"> 
+   <!--Scripts-->
+   <script type="text/javascript" src="script/jquery.min.js"></script> 
+</head>
+  <body>
+    <header>
+      
+    </header>
+      <menu>
+        <botao>
+          <input type="checkbox" id="botao" class="hidden">
+          <label for="botao" class="botao-device">
+            <i></i><i></i><i></i> 
+          </label>
+          <div class="esquerda-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Log%C3%B3tipo_Polit%C3%A9cnico_Leiria_01.png"> </div>
+          <div class="botao-wrapper">
+          <ul>
+            <li><a href="index.html?loc=inicio">Início</a></li>
+            <li><a href="index.html?loc=exposicoes">Exposições</a></li>
+            <li><a href="index.html?loc=perfil">Perfil</a></li>
+            <li><a href="index.html?loc=informacoes">Informações</a></li>
+            <li class="esquerda-menu" href="index.html?loc=dgm">D. G. M.</li>
+          </ul>
+          </div>
+          </botao>
+      </menu>
+
+        <main >
+          <div id="pag"></div>
+        </main>
+
+          <footer>
+            <div class="esquerda-footer">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Log%C3%B3tipo_Polit%C3%A9cnico_Leiria_01.png">
+              <h1>ESCOLA SUPERIOR DE ARTES E DESIGN (CALDAS DA RAINHA)</h1>
+              <h2><p>Campus 3</p>
+              <p>Rua Isidoro Inácio Alves de Carvalho</p>
+                <p>2500-321, Caldas da Rainha - Portugal
+                  <p>Telefone (+351) 262830900 | Fax (+351) 262830904</p>
+                    <p>E-mail esad@esad.ipleiria.pt</p></h2>
+            </div>
+            <div class="direita-footer"> 
+              <h1><p>POLITÉCNICO DE LEIRIA</p></h1>
+              <h2><p>@2019-2020 Curso de Desgin Gráfico e Multimédia</p></h2>
+            </div> 
+          </footer>
+          <script type="text/javascript"> 
+            function getUrl(sParam) {
+                var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }else{
+                      return -1;
+                    }
+                }
+            };	
+            var pagina;
+            if(getUrl("loc")==-1){pagina="inicio";}else{pagina=getUrl("loc");}
+            $(function(){
+              $('#pag').load("core/"+pagina+'.html');
+            });
+          </script>	
+  </body>
+</html>
