@@ -1,6 +1,5 @@
-/*===== ÍNDICE =====*/
+/*===== ÍNDICE =====
 
-/*
 ====ATALHOS====
 
 00 - REGRA GERAL
@@ -19,6 +18,14 @@
 07 - INICIO
 08 - PERFIL
 09 - PUBLICAÇOES
+
+===== TELEMOVEL =====
+
+10 - MENU
+11 - INICIO
+12 - PERFIL
+13 - PUBLICAÇOES
+
 */
 
 
@@ -35,8 +42,41 @@ main{  /*Caixa criada para o conteudo geral*/
   width: 100%; /*Tamanho largura da caixa*/
   height: 905px; /*Tamanho em altura da caixa*/
 }
-.box{width: 80%;margin:0 auto;}
-
+.box{
+  width: 80%;
+  margin:0 auto;
+}
+.box h1{
+  padding-right: 15%;
+  font-size: 120%;
+  color: #F8981D;
+  padding-left: 3%;
+  font-family: sans-serif;
+  border-left: 4px solid #F8981D;
+  text-transform: capitalize; 
+  font-weight: bold; 
+  margin: 30px 0; 
+  display: block;
+}
+.box h2{
+  font-family: sans-serif;
+  color: #F8981D;
+  font-size: 100%;
+  padding-right: 15%;
+  padding-left: 3%;
+  text-transform: capitalize; 
+  margin:10px 0; 
+  padding: 0;
+}
+.box h3{
+  margin:25px 0; 
+  font-size: 16px; 
+  font-weight: normal;
+}
+.box .coluna-2{float: left; 
+  width: 50%; 
+  height: 170px;
+}
 .hidden {
   display: none;
 }
@@ -286,21 +326,7 @@ footer {
 /*===== END =====*/
 
 
-h1 {
-  padding-left: 3%;
-  font-family: sans-serif;
-  color: #F8981D;
-  font-size: 120%;
-  letter-spacing: 2px;
-  padding-right: 15%;
-}
-h2 {
-  padding-left: 3%;
-  font-family: sans-serif;
-  color: #F8981D;
-  font-size: 100%;
-  padding-right: 15%;
-}
+
 
 
 
@@ -485,6 +511,9 @@ botao li a {
 .perfil-menu{ /*Barra a baixo*/
   width: 80%;
 }
+.perfil-menu a { /*Barra a baixo*/
+  font-size: 15px ;
+}
 .perfil-esquerdo{
   margin-left:10%; /*Espaçamemto entre imagens*/
 }
@@ -504,7 +533,57 @@ botao li a {
   width: 25%;
 }
 /*===== END =====*/
+}
 
+/*===== TELEMOVEL =====*/
+@media screen and (max-width: 650px) {
 
+  /*===== MENU 10 =====*/
+
+/*===== INICIO 07 =====*/
+.caixad { display:none;}
+.hex {  /*Imagens dos hexagonos*/
+  width: 45%; /*Tamanho da caixa largura*/
+  height: 20%; /*Tamanho da caixa Altura*/
+}
+.hex:nth-child(4){ /*Hexagono 4 posição*/
+  left:35%;
+}
+/*===== END =====*/
+
+/*===== PERFIL 08 =====*/
+.perfil-painel .avatar{ /*Imagem de perfil*/
+  width: 140px; /*Tamanho largura*/
+  height: 160px; /*Tamanho altura*/
+}
+.perfil-painel h1{ /*Texto centrado*/
+  left:40%;
+  top:170px;
+}
+.perfil-menu{ /*Barra a baixo*/
+  width: 80%;
+  height: 110px;
+}
+.perfil-menu a { /*Barra a baixo*/
+  font-size: 15px ;
+}
+.perfil-esquerdo{
+  margin-left:10%; /*Espaçamemto entre imagens*/
+}
+.perfil-direito{
+  margin-right: 240px; /*Espaçamemto entre imagens*/
+}
+.perfil-galeria{  /*Posicionamento centrado*/
+  width: 70%; 
+}
+.perfil-galeria img{ /*Imagens*/
+  width: 30%; margin-right: 1%;   
+} 
+/*===== END =====*/
+
+/*===== PUBLICAÇOES 09 =====*/
+.pub img{
+  width: 50%;
+}
 }
 }

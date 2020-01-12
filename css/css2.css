@@ -1,7 +1,4 @@
-.box h1{border-left: 4px solid #F8981D; text-transform: capitalize; font-weight: bold; margin: 30px 0; display: block;}
-.box h2{text-transform: capitalize; margin:10px 0; padding: 0;}
-.box h3{margin:25px 0; font-size: 16px; font-weight: normal;}
-.box .coluna-2{float: left; width: 50%; height: 170px;}
+
 .avatar-mini{
   width: 20%;
   float: left;
