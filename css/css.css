@@ -219,8 +219,12 @@ botao li a {
 /*===== PUBLICAÇOES =====*/
 .pub {
   float: left;
-  width: 33.33%;
   padding: 5px;
+}
+
+.pub p {
+  font-size: 25px;
+  margin-top: 3%;
 }
 
 /* Clear floats after image containers */
@@ -231,7 +235,6 @@ botao li a {
 }
 .pub img{
   float: left;
-  margin-top: 50px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
