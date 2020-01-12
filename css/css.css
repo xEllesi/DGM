@@ -1,53 +1,145 @@
+/*===== REGRA GERAL =====*/
 * { /* Reset css */
   margin: 0; /* Margem geral resetada */
   padding: 0; /* Padding geral resetado */
 }
-html { scroll-behavior: smooth; } 
+html { scroll-behavior: smooth; } /* Ao dar scroll fica mais suave */
 body { /* Corpo do Wesbite */
 background: #ffffff; /* Cor do background geral */
 }
-/* Navegador */
+main{  /*Caixa criada para o conteudo geral*/
+  width: 100%; /*Tamanho largura da caixa*/
+  height: 905px; /*Tamanho em altura da caixa*/
+}
+/*===== END =====*/
+
+/*===== MENU =====*/
 menu{
   height: 50px; /* Espaço entre o topo */
-  background-color: #F8981D;
-  z-index: 10;
+  background-color: #F8981D; /* Cor de fundo */
+  z-index: 10; /* Prioridade */
 }
-botao ul{ 
-  width: 90%;
-  float: left;
-  border-bottom: 5px solid #F8981D;
+botao ul{ /* Caixinha dos botões do menu */
+  width: 90%; /* Tamanho da caixa */
+  float: left; /* Onde se alinha */
+  border-bottom: 5px solid #F8981D; /* Adicionado border e cor */
 }
 botao li {
   display: inline; /* Ficar em linha */
   margin-left: 40px; /* Margem da esquerda */
 } 
 botao li a {
-  color: #ffffff;
-  font-family: sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  line-height: 50px !important;
+  color: #ffffff; /* Cor das letras */
+  font-family: sans-serif; /* Tipo de fonte */
+  text-decoration: none; /* Sem decorações */
+  text-transform: uppercase; /* Letras transformadas em capslock */
+  line-height: 50px ; /* Onde se alinham */
 }
  botao li a:hover{
-   border-bottom: 2px solid #F8981D;
+   border-bottom: 2px solid #ffffff; /* Passar por cima do botão */
  }
 
- .esquerda-logo {
+ .esquerda-logo { /* Logotipo posicionamento*/
   height: 50px; /* Espaço entre o topo */
-  width: 10%;
-  float: left;
-  border-bottom: 5px solid #F8981D;
+  width: 10%; /* Tamanho */
+  float: left; /* Onde se posiciona */
+  border-bottom: 5px solid #F8981D; /* Colocado border por baixo para completar a barra */
  }
- .esquerda-logo img{
-  width: 85%;
+ .esquerda-logo img{ /* Logotipo imagem*/
+  width: 85%; /* Tamanho*/
  }
-.esquerda-menu {
-  line-height: 50px;
-  font-family: sans-serif;
-  color: #F8981D;
-  float: right;
-  margin-right: 4%;
-  font-weight: bold;
+.esquerda-menu { /* DGM */
+  line-height: 50px; /* Onde se alinha*/
+  font-family: sans-serif; /* Tipo de letra */
+  color: #ffffff; /* Cor da letra */
+  float: right; /* Onde se posiciona */
+  margin-right: 4%; /* Margem da direita */
+  font-weight: bold; /*Peso da fonte */
+}
+/*===== END =====*/
+
+/*===== INICIO =====*/
+.caixae, .caixad {   /*caixas direita e esquerda dos hexagonos laterais*/
+  width: 15%; /*Tamanho largura das caixas*/
+  height: 900px; /*Tamanho altura das caixas*/
+}
+.caixae{  /*Caixa esquerda*/
+  float: left;   /*Alinhado à esquerda*/
+  clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%, 100% 0%, 0% 100%); /* Shape da border */  
+  cursor:pointer; /* Tipo de cursor a passar por cima */ 
+}
+.caixad{   /*Caixa direita*/
+  float: right;   /*Alinhado à direita*/
+  clip-path: polygon(100% 0%, 50% 100%, 100% 0%, 100% 100%, 0% 75%, 0% 25%); /* Shape da border */
+  cursor:pointer; /* Tipo de cursor a passar por cima */ 
+}
+.caixae img, .caixad img{ /* Shape das imagens */
+  width: 100%; /*Tamanho largura da imagem*/
+  height: 100%; /*Tamanho altura da imagem*/
+}
+.Galeria{   /*Caixa para as imagens*/
+  width: 70%; /*Tamanho da caixa largura*/
+  height: 900px; /*Tamanho da caixa altura*/
+  float: left; /*Posicionado à esquerda*/
+  position: relative; /*Posicionado ao centro*/
+}
+.hex {  /*Imagens dos hexagonos*/
+
+  width: 20%;
+  height: calc(30%);
+  position: absolute;
+}
+.Hexagono{ /* Propriedades dos hexagonos da galeria */
+  width: 100%;   
+  height: calc(100%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%,0% 75%, 0% 25%); /* Shape da border */
+  padding:5px; /* Tamanho da linha da border */
+  background: #F8981D; /* Cor da border */
+  transition:transform 0.2s; /* Tempo que demora a aumentar */
+  cursor:pointer; /* Tipo de cursor a passar por cima */
+}
+.Galeria .hex .Hexagono img{ /* Shape das imagens */
+  width: 100%;
+  height: calc(100%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.hex:hover{ /* Quando passa por cima aumenta tamanho */
+  transform:scale(1.2); /* Tamanho a aumentar */
+  transition:transform 0.2s; /* Tempo que demora a diminuir */
+  z-index:10; /* Prioridade */
+}
+
+.hex:nth-child(1){
+  top:10%;
+  left:5.5%;
+
+}
+.hex:nth-child(2){
+  top:33%;
+  left:16%;
+}
+
+.hex:nth-child(3){
+  top:56%;
+  left:5.5%;
+}
+
+.hex:nth-child(4){
+  top:56%;
+  left:26.5%;
+}
+
+.hex:nth-child(5){
+  top: 10%;
+  left:68.5%;
+}
+.hex:nth-child(6){
+  top:56%;
+  left:68.5%;
+}
+.hex:nth-child(7){
+  top:33%;
+  left:58%;
 }
 
 
@@ -164,97 +256,7 @@ line-height: 50px;
 
 
 
-main{ 
-  width: 100%;
-  height: 900px;   /*Tamanho das caixas lateral*/
-}
-/**/  
-  /**/
-.caixae, .caixad {   /*caixas direita e esquerda dos hexagonos laterais*/
-  width: 15%; 
-  height: 900px;
-}
-.caixae{  /*Caixa esquerda*/
-  float: left;   /*Alinhado à esquerda*/
-  clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%, 100% 0%, 0% 100%); /* Shape da border */  
-  cursor:pointer; /* Tipo de cursor a passar por cima */ 
-}
-.caixad{   /*Caixa direita*/
-  float: right;   /*Alinhado à direita*/
-  clip-path: polygon(100% 0%, 50% 100%, 100% 0%, 100% 100%, 0% 75%, 0% 25%); /* Shape da border */
-  cursor:pointer; /* Tipo de cursor a passar por cima */ 
 
-}
-.caixae img, .caixad img{ /* Shape das imagens */
-  width: 100%; 
-  height: 100%;
-}
-/**/ 
-  /**/
-.Galeria{   /*Imagens da galeria*/
-  width: 70%;
-  height: 900px;
-  float: left;
-  position: relative;
-}
-.hex {   /*Imagens dos hexagonos*/
-  margin-bottom: 10px;
-  width: 20%;
-  height: calc(30%);
-  position: absolute;
-}
-.Hexagono{ /* Propriedades dos hexagonos da galeria */
-  width: 100%;   
-  height: calc(100%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%,0% 75%, 0% 25%); /* Shape da border */
-  padding:5px; /* Tamanho da linha da border */
-  background: #F8981D; /* Cor da border */
-  transition:transform 0.2s; /* Tempo que demora a aumentar */
-  cursor:pointer; /* Tipo de cursor a passar por cima */
-}
-.Galeria .hex .Hexagono img{ /* Shape das imagens */
-  width: 100%;
-  height: calc(100%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-.hex:hover{ /* Quando passa por cima aumenta tamanho */
-  transform:scale(1.2); /* Tamanho a aumentar */
-  transition:transform 0.2s; /* Tempo que demora a diminuir */
-  z-index:10; /* Prioridade */
-}
-
-.hex:nth-child(1){
-  top:10%;
-  left:5.5%;
-
-}
-.hex:nth-child(2){
-  top:33%;
-  left:16%;
-}
-
-.hex:nth-child(3){
-  top:56%;
-  left:5.5%;
-}
-
-.hex:nth-child(4){
-  top:56%;
-  left:26.5%;
-}
-
-.hex:nth-child(5){
-  top: 10%;
-  left:68.5%;
-}
-.hex:nth-child(6){
-  top:56%;
-  left:68.5%;
-}
-.hex:nth-child(7){
-  top:33%;
-  left:58%;
-}
 
 
 
@@ -280,12 +282,13 @@ footer {
 }
 .direita-footer, .esquerda-footer{
   width: 48%;
-  margin: 1% 1%;
+  margin: 2% 1%;
   float: left;
 }
 .esquerda-footer img{
   width: 20%;
   margin-top:-20px;
+  margin-left: 1.5%;
 }
 
 @media screen and (max-width: 1150px) {
