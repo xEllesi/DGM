@@ -1,13 +1,19 @@
 /*===== ÍNDICE =====*/
 
 /*
+====PC====
+
 00 - REGRA GERAL
 01 - MENU
 02 - INICIO
 03 - PERFIL
 04 - PUBLICAÇOES
 05 - FOOTER
-06 - BARRA MOBILE
+
+====TABLET====
+
+06 - MENU
+07 - INICIO
 */
 
 
@@ -232,9 +238,7 @@ botao li a {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 } 
-.hidden {
-  display: none;
-}
+
 /*===== END =====*/
 
 /*===== PUBLICAÇOES 04 =====*/
@@ -298,12 +302,12 @@ h2 {
 
 
 
-
+/*===== TABLET =====*/
 @media screen and (max-width: 1150px) {
-/*===== BARRA MOBILE 06 =====*/
 
+/*===== MENU 06 =====*/
 .botao-wrapper {
-  position: fixed;
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
@@ -320,15 +324,12 @@ h2 {
   transform: translateY(-50%);
   width: 0%;
 }
-
 .botao-wrapper ul li {
   display: block;
   float: none;
   text-align: center;
   margin-bottom: 10px;
-
 }
-
 .botao-wrapper ul li:nth-child(1) a {
   transition-delay: 0.2s;
 }
@@ -414,40 +415,58 @@ botao li a {
 
 
 
-
-
 #botao:checked + .botao-device { /* Formato de x */
   transform: rotate(45deg);
 }
-
 #botao:checked + .botao-device i {
   background: rgb(255, 255, 255); /* Cor das linhas x */
   transition: transform 0.2s ease; /* tempo de transformação x */
 }
-
 #botao:checked + .botao-device i:nth-child(1) { /* Linha 1*/
   transform: translateY(6px) rotate(180deg); /* rotação*/
 }
-
 #botao:checked + .botao-device i:nth-child(2) { /* Linha 2*/
   opacity: 0; /* Desaparece ao clicar*/
 }
-
 #botao:checked + .botao-device i:nth-child(3) {  /* linha 3*/
   transform: translateY(-6px) rotate(90deg); /* rotaçao */
 }
-
 #botao:checked ~ .botao-wrapper {
   z-index: 9990; /* Prioridade sobre a página */
   opacity: 1;
 }
-
 #botao:checked ~ .botao-wrapper ul li a {
   opacity: 1;  /* Background aparece*/
   transform: translateX(0);
 }
 
-.hidden {
-  display: none;
+/*===== INICIO 07 =====*/
+.caixae{  display: none;}
+.caixad {   /*caixas direita do hexagono lateral*/
+  width: 30%; /*Tamanho largura das caixas*/
+  clip-path: polygon(100% 0%, 50% 100%, 100% 0%, 100% 100%, 0% 75%, 0% 25%); /* Shape da border */
+}
+.hex {  /*Imagens dos hexagonos*/
+  width: 25%; /*Tamanho da caixa largura*/
+}
+.Galeria .hex .Hexagono img{ /* Shape das imagens */
+  width: 100%; /*Tamanho em altura*/
+  height: calc(100%); /*Tamanho em largura*/
+}
+.hex:hover{ /* Quando passa por cima aumenta tamanho */
+  transform:scale(1.2); /* Tamanho a aumentar */
+  transition:transform 0.2s; /* Tempo que demora a diminuir */
+  z-index:10; /* Prioridade */
+}
+.hex:nth-child(4){ /*Hexagono 4 posição*/
+  left:30.5%;
+}
+/*===== END =====*/
+
+
+
+
+
+
 }
 }
