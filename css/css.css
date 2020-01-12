@@ -222,29 +222,18 @@ botao li a {
 /*===== END =====*/
 
 /*===== PUBLICAÇOES =====*/
-.pub {
-  float: left;
-  padding: 5px;
-}
-
-.pub p {
-  font-size: 25px;
-  margin-top: 3%;
-}
-
 .ColabTitle p {
-  font-size: 2px;
+  margin-top: 50px;
+  font-size: 5px;   /* Tamanho do texto*/
 }
-
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+.pub p {
+  font-size: 20px;  /* Tamanho do texto*/
+  margin-top: 5%;  /* Margem do topo*/
 }
 .pub img{
   float: left;
   width: 15%;
+  margin-right: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
