@@ -7,7 +7,7 @@
 03 - PERFIL
 04 - PUBLICAÇOES
 05 - FOOTER
-06 - BOTÃO MOBILE
+06 - BARRA MOBILE
 */
 
 
@@ -300,7 +300,43 @@ h2 {
 
 
 @media screen and (max-width: 1150px) {
-/*===== BOTÃO MOBILE 06 =====*/
+/*===== BARRA MOBILE 06 =====*/
+menu{
+  height: 0; /* Espaço entre o topo */
+  background-color: #F8981D; /* Cor de fundo */
+}
+botao ul{ /* Caixinha dos botões do menu */
+  width: 90%; /* Tamanho da caixa */
+  float: left; /* Onde se alinha */
+  border-bottom: none; /* Adicionado border e cor */
+}
+botao li {
+  margin-left: 0px; /* Margem da esquerda */
+} 
+botao li a {
+  color: white ;
+  font-family: sans-serif; /* Tipo de fonte */
+  text-decoration: none; /* Sem decorações */
+  text-transform: uppercase; /* Letras transformadas em capslock */
+  line-height: 50px ; /* Onde se alinham */
+}
+ botao li a:hover{ display: none;}
+.esquerda-logo { display: none;}
+.esquerda-logo img{ display: none;}
+.esquerda-menu { display: none;}
+
+
+
+
+
+.botao-wrapper {
+  position: fixed;
+  width: 100%;  /* Tamanhos */
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  background: #F8981D;
+}
 #botao:checked + .botao-device { /* Formato de x */
   transform: rotate(45deg);
 }
@@ -331,17 +367,7 @@ h2 {
 
 
 
-.botao-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0;
-    transition: all 0.2s ease;
-    background: #F8981D;
-  }
+
 
   .botao-wrapper ul {
         position: absolute;
