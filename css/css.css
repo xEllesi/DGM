@@ -11,6 +11,7 @@ main{  /*Caixa criada para o conteudo geral*/
   width: 100%; /*Tamanho largura da caixa*/
   height: 905px; /*Tamanho em altura da caixa*/
 }
+.box{width: 80%;margin:0 auto;}
 /*===== END =====*/
 
 /*===== MENU =====*/
@@ -214,6 +215,10 @@ botao li a {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 } 
+.hidden {
+  display: none;
+}
+
 /*===== END =====*/
 
 /*===== PUBLICAÇOES =====*/
