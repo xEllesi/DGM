@@ -718,6 +718,25 @@ botao li a {
 .pub img{
   width: 25%;
 }
+.login-painel{ /* Painel de login */
+  width: 90%;
+}
+.btn-envio{ /* Botao de envio */
+  width: 80%; 
+  color: #ffffff; 
+  padding: 20px 10px; 
+  margin: 60px 10%;
+}
+.loginR span,.registoL span { /* Marcaçao */
+  width: 80%; 
+  margin-bottom: 40px; 
+}
+.loginR span p,.registoL span p { /* Marcação */
+  width: 100%; 
+}
+.loginR span input,.registoL span input { /* Marcaçao */
+  width: 100%; 
+}
 
 /*===== END =====*/
 
@@ -789,25 +808,7 @@ botao li a {
 .pub img{
   width: 50%;
 }
-.login-painel{ /* Painel de login */
-  width: 90%;
-}
-.btn-envio{ /* Botao de envio */
-  width: 80%; 
-  color: #ffffff; 
-  padding: 20px 10px; 
-  margin: 60px 10%;
-}
-.loginR span,.registoL span { /* Marcaçao */
-  width: 80%; 
-  margin-bottom: 40px; 
-}
-.loginR span p,.registoL span p { /* Marcação */
-  width: 100%; 
-}
-.loginR span input,.registoL span input { /* Marcaçao */
-  width: 100%; 
-}
+
 
 /*===== TELEMOVEL =====*/
 
