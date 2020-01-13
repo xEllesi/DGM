@@ -490,7 +490,7 @@ footer h2 {
 }
 .btn-envio:hover{ /* SObre o botao */
   color: #CCCCCC; 
-  background-color: #F8981D; 
+  background-color: rgb(255, 202, 132); 
 }
 .loginR,.registoL {  /* Tamanho */
   width: 100%;
