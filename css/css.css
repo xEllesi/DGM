@@ -12,7 +12,6 @@
 04 - PERFIL
 05 - PUBLICAÇOES
 06 - EXPOSIÇÃO
-017- LOGIN
 
 ====TABLET====
 
@@ -451,77 +450,6 @@ footer h2 {
 
 /*===== END =====*/
 
-/*===== LOGIN 017 =====*/
-
-.login-painel{ /* Painel de login */
-  width: 50%;
-  height: 250px;
-  margin:60px auto;
-  border: 2px solid #000000;
-  border-radius: 10px;
-  padding: 15px;
-}
-.login-selector{ /* Seletor de login */
-  display: block; 
-  border-bottom: 5px solid #F8981D; 
-}
-.login-selector a{ /* Texto */
-  width: 200px;
-  text-decoration: none; 
-  padding: 5px 10px; 
-  color:  #F8981D; 
-  border: 1px solid  #F8981D;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-.ativo-painel {
-  font-weight: bold; 
-  background-color: #F8981D; 
-  color:  #000000 !important; 
-}
-.btn-envio{ /* Botao de envio */ 
-  color: #ffffff; 
-  padding: 120px; 
-  padding-top: 0px;
-  padding-bottom: 20px;
-  margin-top: 50px;
-  margin: 35%;
-  background-color: #F8981D; 
-  border-radius: 15px; 
-  border: 1px solid #000000;
-  cursor: pointer;
-  text-decoration: none;
-}
-.btn-envio:hover{ /* SObre o botao */
-  color: #CCCCCC; 
-  background-color: rgb(255, 202, 132); 
-}
-.loginR,.registoL {  /* Tamanho */
-  width: 100%;
-}
-.loginR span,.registoL span { /* Marcaçao */
-  width: 100%; 
-  margin-bottom: 10px; 
-  height: 40px; 
-  line-height: 40px; 
-  float: left;
-}
-.registoL { 
-  display: none;
-}
-.loginR span p,.registoL span p { /* Marcação */
-  float: left; 
-  width: 10%; 
-  line-height: 40px;
-}
-.loginR span input,.registoL span input { /* Marcaçao */
-  float: right; 
-  width: 80%; 
-  line-height: 40px;
-}
-
-/*===== END =====*/
-
 /*===== TABLET =====*/
 @media screen and (max-width: 1150px) {
 
@@ -633,9 +561,15 @@ botao li a {
   text-transform: uppercase; /* Letras transformadas em capslock */
   line-height: 50px ; /* Onde se alinham */
 }
-.esquerda-logo { display: none;}
-.esquerda-logo img{ display: none;}
-.esquerda-menu { display: none !important;}
+.esquerda-logo { 
+  display: none;
+}
+.esquerda-logo img { 
+  display: none;
+}
+.esquerda-menu { 
+  display: none !important;
+}
 
 #botao:checked + .botao-device { /* Formato de x */
   transform: rotate(45deg);
@@ -722,27 +656,6 @@ botao li a {
 .pub img{
   width: 25%;
 }
-.loginR span,.registoL span { /* Marcaçao */
-  width: 80%; 
-  margin-bottom: 40px; 
-}
-.loginR span p,.registoL span p { /* Marcação */
-  width: 100%; 
-}
-.loginR span input,.registoL span input { /* Marcaçao */
-  width: 100%; 
-}
-.login-painel{ /* Painel de login */
-  height: 350px;
-  margin:50px auto;
-}
-
-.btn-envio{ /* Botao de envio */ 
-  padding: 30%; 
-  padding-top: 0px;
-  padding-bottom: 20px;
-  margin: 0%;
-}
 
 /*===== END =====*/
 
@@ -814,10 +727,6 @@ botao li a {
 .pub img{
   width: 50%;
 }
-.login-painel{ /* Painel de login */
-  height: 300px;
-}
-
 /*===== TELEMOVEL =====*/
 
 /*===== EXTRA 016 =====*/
