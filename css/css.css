@@ -481,12 +481,15 @@ footer h2 {
 .btn-envio{ /* Botao de envio */
   width: 80%; 
   color: #ffffff; 
-  padding: 20px 10px; 
-  margin:10px 10%;
+  padding: 40px; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0%;
   background-color: #F8981D; 
   border-radius: 15px; 
-  border-color: #000000;
+  border: 1px solid #000000;
   cursor: pointer;
+  text-decoration: none;
 }
 .btn-envio:hover{ /* SObre o botao */
   color: #CCCCCC; 
@@ -724,8 +727,8 @@ botao li a {
 .btn-envio{ /* Botao de envio */
   width: 80%; 
   color: #ffffff; 
-  padding: 20px 10px; 
-  margin: 60px 10%;
+  padding: 15px 15px; 
+  margin: 80%;
 }
 .loginR span,.registoL span { /* Marcaçao */
   width: 80%; 
@@ -808,7 +811,10 @@ botao li a {
 .pub img{
   width: 50%;
 }
-
+.btn-envio{ /* Botao de envio */
+  padding: 10px 10px; 
+  margin: 80%;
+}
 
 /*===== TELEMOVEL =====*/
 
