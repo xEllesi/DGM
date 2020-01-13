@@ -1,0 +1,60 @@
+<div class="box">
+  
+  
+  <div class="login-painel"> 
+    <div class="login-selector">
+      <a href="#" id="log" class="login-btn ativo-painel">Login</a>
+      <a href="#" id="reg" class="login-btn">Registo</a>
+    </div>
+
+
+    <form class="loginR" method="POST" action="index.html?loc=perfil">
+      <h1>Login</h1>
+      <span><p>Utilizador</p>
+        <input type="text" name="" value="" placeholder="Utilizador">
+      </span>
+      <span></p>Passoword</p>
+        <input type="password" name="" value="" placeholder="************">
+      </span>
+      <input type="submit" name="" value="Entrar" class="btn-envio">
+    </form>
+
+
+    <form class="registoL" method="POST" action="index.html?loc=perfil">
+      <h1>Registo</h1>
+      <span>Utilizador
+        <input type="text" name="" value="" placeholder="Utilizador">
+      </span>
+      <span>Passoword
+        <input type="password" name="" value="" placeholder="************">
+      </span>
+      <span>Repet Passoword
+        <input type="password" name="" value="" placeholder="************">
+      </span>
+      <span>Email
+        <input type="email" name="" value="" placeholder="email">
+      </span>
+      <input type="submit" name="" value="Registar" class="btn-envio">
+    </form>
+
+</div>
+
+
+</div>
+
+<script>
+    $(document).ready(function(){
+      $("#log").click(function(){
+        $(".registoL").hide();
+        $(".loginR").show();
+        $("#reg").removeClass("ativo-painel");
+        $("#log").addClass("ativo-painel");
+      });
+      $("#reg").click(function(){
+        $(".registoL").show();
+        $(".loginR").hide();
+        $("#log").removeClass("ativo-painel");
+        $("#reg").addClass("ativo-painel");
+      })
+    });
+</script>

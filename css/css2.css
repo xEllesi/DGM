@@ -87,9 +87,13 @@ display: none;
 }
 
 @media screen and (max-width: 600px) {
-  .coluna-2-max{width: 100%; float: left;}
   .img-project{
     height: 300px;   
+  }
+  .coluna-2{width: 100% !important;}
+  .avatar-mini img{
+    width: 100% !important;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
 
 }

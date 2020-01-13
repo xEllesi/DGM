@@ -1,30 +1,34 @@
 /*===== ÍNDICE =====
 
-====ATALHOS====
+====GERAL====
 
 00 - REGRA GERAL
-05 - FOOTER
+01 - FOOTER
 
 ====PC====
 
-01 - MENU
-02 - INICIO
-03 - PERFIL
-04 - PUBLICAÇOES
+02 - MENU
+03 - INICIO
+04 - PERFIL
+05 - PUBLICAÇOES
+06 - EXPOSIÇÃO
+017- LOGIN
 
 ====TABLET====
 
-06 - MENU
-07 - INICIO
-08 - PERFIL
-09 - PUBLICAÇOES
+07 - MENU
+08 - INICIO
+09 - PERFIL
+010 - PUBLICAÇOES
+011 - EXTRA
 
 ===== TELEMOVEL =====
 
-10 - MENU
-11 - INICIO
-12 - PERFIL
-13 - PUBLICAÇOES
+012 - MENU
+013 - INICIO
+014 - PERFIL
+015 - PUBLICAÇOES
+016 - EXTRA
 
 */
 
@@ -42,11 +46,11 @@ main{  /*Caixa criada para o conteudo geral*/
   width: 100%; /*Tamanho largura da caixa*/
   min-height: 905px; /*Tamanho em altura da caixa*/
 }
-.box{
-  width: 80%;
-  margin:0 auto;
+.box{ /*Caixa geral de todas as paginas*/
+  width: 80%; /*Tamanho da caixa*/
+  margin:0 auto; /*centralizado*/
 }
-.box h1{
+.box h1{ /*Texto h1 influenciados dentro da caixa */
   padding-right: 15%;
   font-size: 120%;
   color: #F8981D;
@@ -58,7 +62,7 @@ main{  /*Caixa criada para o conteudo geral*/
   margin: 30px 0; 
   display: block;
 }
-.box h2{
+.box h2{ /*Texto h2 influenciados dentro da caixa */
   font-family: sans-serif;
   color: #F8981D;
   font-size: 100%;
@@ -68,23 +72,30 @@ main{  /*Caixa criada para o conteudo geral*/
   margin:10px 0; 
   padding: 0;
 }
-.box h3{
-  margin:25px 0; 
+.box h3 {margin:25px 0;  /*Texto h3 influenciados dentro da caixa */
   font-size: 16px; 
   font-weight: normal;
 }
-.box .coluna-2{float: left; 
+.box .coluna-2 { /*colunas influenciadas dentro da caixa */
+  float: left; 
   width: 50%; 
   height: 170px;
 }
-.hidden {
-  display: none;
-}
 
+.limpa { /*caixa vazia */
+  clear: both !important; 
+  display: block; 
+  height: 80px; 
+  float:left; 
+  width: 100%;
+}
 
 /*===== END =====*/
 
-/*===== MENU ===== 01 */
+/*===== MENU ===== 02 */
+.hidden { /*Desaparece a barra de mobile/tablet */
+  display: none;
+}
 menu{
   height: 50px; /* Espaço entre o topo */
   background-color: #F8981D; /* Cor de fundo */
@@ -129,7 +140,7 @@ botao li a {
 }
 /*===== END =====*/
 
-/*===== INICIO 02 =====*/
+/*===== INICIO 03 =====*/
 .caixae, .caixad {   /*caixas direita e esquerda dos hexagonos laterais*/
   width: 15%; /*Tamanho largura das caixas*/
   height: 900px; /*Tamanho altura das caixas*/
@@ -207,7 +218,7 @@ botao li a {
 }
 /*===== END =====*/
 
-/*===== PERFIL 03 =====*/
+/*===== PERFIL 04 =====*/
 .perfil-painel{ /*Painel geral*/
   background-color: #F8981D;
   width: 80%; /*Tamanho largura*/
@@ -288,7 +299,7 @@ botao li a {
 
 /*===== END =====*/
 
-/*===== PUBLICAÇOES 04 =====*/
+/*===== PUBLICAÇOES 05 =====*/
 .ColabTitle p {
   margin-top: 50px;
   font-size: 5px;   /* Tamanho do texto*/
@@ -306,9 +317,29 @@ botao li a {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+.avatar-mini{ /* Informaçoes */
+  width: 20%;
+  float: left;
+  background-color: black;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.avatar-mini img{ /* Informações*/
+  width: 99%;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.avatar-micro{ /* Exposições*/
+  width: 10%;
+  float: left;
+  background-color: black;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.avatar-micro img{ /* Exposições*/
+  width: 99%;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
 /*===== END =====*/
 
-/*===== FOOTER 05 =====*/
+/*===== FOOTER 01 =====*/
 footer {
   clear: both; /* limpa alterações até ao momento*/
   display: block; /* Ocupar toda a caixa*/
@@ -332,33 +363,165 @@ footer h2 {
 }
 /*===== END =====*/
 
+/*===== EXPOSIÇÃO 06=====*/
+.coluna-2-max { 
+  width: 80%; 
+  float: left;
+}
+.coluna-2-min { 
+  width: 20%; 
+  float: left;
+}
+.form { /* Formulário */
+  width: 100%; 
+  margin: 10px 0; 
+  height: 30px;
+}
+.form input {  /* Escrever algo */
+  width: 80%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px;
+  float: left;
+}
+.form .btn-img{ /* Imagem */
+  widows: 20%;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+  cursor: pointer;
+}
+.form .btn-img img { /* Imagem */
+  width: 25px;
+  float: left;
+} 
+.tag{  /* Caixa de tags */
+  display: block;
+  height: 400px;
+  background-color: #F8981D; 
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.tag h1 { /*Texto da Caixa de tags */
+  border-left: none; 
+  color: white; 
+  font-weight: normal; 
+  font-size: 14px; 
+  padding-top: 10px; 
+  margin-bottom: 10px;
+}
+.tag-left, .tag-right{ /* Texto separado */
+  color: white; 
+  width: 48%; 
+  float: left; 
+  margin-bottom: 10px;
+} 
+.tag-left {  /* Letras */
+  margin-left: 5px;
+}
+.tag-right { /* Numeros */
+  text-align: right;
+}
+.img-project{ /* Cartaz */
+  width: 80%;
+  height: 400px;
+  overflow: hidden; 
+  border-radius: 10px;
+  margin-left: 5px;
+}
+.img-informacao{ /* Informação do cartaz */
+  width: 100%; 
+  margin-bottom: 20px;
+}
+.altura-1 { /* Altura da colune */
+  height: 60px !important;
+}
+.altura-4 { /* Altura da colune */
+  height: 400px !important;
+}
+.mt-2 { /* texto */
+  margin-top: 15px;
+}
 
+/*===== END =====*/
 
+/*===== LOGIN 017 =====*/
 
+.login-painel{ /* Painel de login */
+  width: 50%;
+  margin:50px auto;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 15px;
+}
+.login-selector{ /* Seletor de login */
+  display: block; 
+  border-bottom: 5px solid #F8981D; 
+}
+.login-selector a{ /* Texto */
+  width: 200px;
+  text-decoration: none; 
+  padding: 5px 10px; 
+  color:  #F8981D; 
+  border: 1px solid  #F8981D;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.ativo-painel {
+  font-weight: bold; 
+  background-color: #F8981D; 
+  color:  #000000 !important; 
+}
+.btn-envio{ /* Botao de envio */
+  width: 80%; 
+  color: #ffffff; 
+  padding: 20px 10px; 
+  margin:10px 10%;
+  background-color: darkblue; 
+  border-radius: 15px; 
+  border-color: #000000;
+  cursor: pointer;
+}
+.btn-envio:hover{ /* SObre o botao */
+  color: #CCCCCC; 
+  background-color: blue; 
+}
+.loginR,.registoL {  /* Tamanho */
+  width: 100%;
+}
+.loginR span,.registoL span { /* Marcaçao */
+  width: 100%; 
+  margin-bottom: 10px; 
+  height: 40px; 
+  line-height: 40px; 
+  float: left;
+}
+.registoL { 
+  display: none;
+}
+.loginR span p,.registoL span p { /* Marcação */
+  float: left; 
+  width: 10%; 
+  line-height: 40px;
+}
+.loginR span input,.registoL span input { /* Marcaçao */
+  float: right; 
+  width: 80%; 
+  line-height: 40px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*===== END =====*/
 
 /*===== TABLET =====*/
 @media screen and (max-width: 1150px) {
 
-/*===== MENU 06 =====*/
+/*===== MENU 07 =====*/
 .esquerda-footer img{
   max-width: 30%;
   margin-top:-20px;
@@ -470,8 +633,6 @@ botao li a {
 .esquerda-logo img{ display: none;}
 .esquerda-menu { display: none !important;}
 
-
-
 #botao:checked + .botao-device { /* Formato de x */
   transform: rotate(45deg);
 }
@@ -497,7 +658,7 @@ botao li a {
   transform: translateX(0);
 }
 
-/*===== INICIO 07 =====*/
+/*===== INICIO 08 =====*/
 .caixae{  display: none;}
 .caixad {   /*caixas direita do hexagono lateral*/
   width: 30%; /*Tamanho largura das caixas*/
@@ -520,7 +681,7 @@ botao li a {
 }
 /*===== END =====*/
 
-/*===== PERFIL 08 =====*/
+/*===== PERFIL 09 =====*/
 .perfil-painel{ /*Painel geral*/
   width: 100%; /*Tamanho largura*/
   height: 220px; /*Tamanho altura*/
@@ -549,27 +710,44 @@ botao li a {
 .perfil-galeria img{ /*Imagens*/
   width: 30%; margin-right: 1%;   
 } 
-/*===== END =====*/
 
-/*===== PUBLICAÇOES 09 =====*/
+/*===== PUBLICAÇOES 010 =====*/
 .pub p {
   font-size: 17px;  /* Tamanho do texto*/
 }
 .pub img{
   width: 25%;
 }
+
 /*===== END =====*/
-}
+
+/*===== TABLET =====*/
+
+/*===== EXTRA 011 =====*/
+@media screen and (max-width: 900px) {
+  .limpa {height: 200px}
+  .tag {display: none;}
+  .coluna-2-max{width: 100%; float: left;}
+  .coluna-2-min{width: 70%; float: left;}
+  .altura-4{height: 300px !important;}
+  .form input{ 
+    display: none;
+  }
+  .form .btn-img{ 
+  display: none;
+  }
+
+  /*===== END =====*/
 
 /*===== TELEMOVEL =====*/
 @media screen and (max-width: 650px) {
 
-  /*===== MENU 10 =====*/
+  /*===== MENU 012 =====*/
   .esquerda-footer img{
     max-width: 60%;
     margin-top:-10px;
   }
-/*===== INICIO 07 =====*/
+/*===== INICIO 013 =====*/
 .caixad { display:none;}
 .hex {  /*Imagens dos hexagonos*/
   width: 45%; /*Tamanho da caixa largura*/
@@ -580,7 +758,7 @@ botao li a {
 }
 /*===== END =====*/
 
-/*===== PERFIL 08 =====*/
+/*===== PERFIL 014 =====*/
 .perfil-painel .avatar{ /*Imagem de perfil*/
   width: 140px; /*Tamanho largura*/
   height: 160px; /*Tamanho altura*/
@@ -606,12 +784,28 @@ botao li a {
 }
 .perfil-galeria img{ /*Imagens*/
   width: 100% !important;
-} 
-/*===== END =====*/
-
-/*===== PUBLICAÇOES 09 =====*/
+}
+/*===== PUBLICAÇOES 015 =====*/
 .pub img{
   width: 50%;
 }
+
+/*===== TELEMOVEL =====*/
+
+/*===== EXTRA 016 =====*/
+
+@media screen and (max-width: 600px) {
+  .img-project {
+    height: 300px;   
+  }
+  .coluna-2 {
+    width: 100% !important;
+  }
+  .avatar-mini img {
+    width: 100% !important;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
 }
+
+/*===== END =====*/
 }
