@@ -483,14 +483,14 @@ footer h2 {
   color: #ffffff; 
   padding: 20px 10px; 
   margin:10px 10%;
-  background-color: darkblue; 
+  background-color: #F8981D; 
   border-radius: 15px; 
   border-color: #000000;
   cursor: pointer;
 }
 .btn-envio:hover{ /* SObre o botao */
   color: #CCCCCC; 
-  background-color: blue; 
+  background-color: #F8981D; 
 }
 .loginR,.registoL {  /* Tamanho */
   width: 100%;
