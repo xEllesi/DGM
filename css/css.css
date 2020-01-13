@@ -455,7 +455,8 @@ footer h2 {
 
 .login-painel{ /* Painel de login */
   width: 50%;
-  margin:50px auto;
+  height: 250px;
+  margin:60px auto;
   border: 2px solid #000000;
   border-radius: 10px;
   padding: 15px;
@@ -478,13 +479,13 @@ footer h2 {
   background-color: #F8981D; 
   color:  #000000 !important; 
 }
-.btn-envio{ /* Botao de envio */
-  width: 80%; 
+.btn-envio{ /* Botao de envio */ 
   color: #ffffff; 
-  padding: 40px; 
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 0%;
+  padding: 120px; 
+  padding-top: 0px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  margin: 35%;
   background-color: #F8981D; 
   border-radius: 15px; 
   border: 1px solid #000000;
@@ -721,15 +722,6 @@ botao li a {
 .pub img{
   width: 25%;
 }
-.login-painel{ /* Painel de login */
-  width: 90%;
-}
-.btn-envio{ /* Botao de envio */
-  width: 80%; 
-  color: #ffffff; 
-  padding: 15px 15px; 
-  margin: 80%;
-}
 .loginR span,.registoL span { /* Marcaçao */
   width: 80%; 
   margin-bottom: 40px; 
@@ -739,6 +731,17 @@ botao li a {
 }
 .loginR span input,.registoL span input { /* Marcaçao */
   width: 100%; 
+}
+.login-painel{ /* Painel de login */
+  height: 350px;
+  margin:50px auto;
+}
+
+.btn-envio{ /* Botao de envio */ 
+  padding: 30%; 
+  padding-top: 0px;
+  padding-bottom: 20px;
+  margin: 0%;
 }
 
 /*===== END =====*/
@@ -811,9 +814,8 @@ botao li a {
 .pub img{
   width: 50%;
 }
-.btn-envio{ /* Botao de envio */
-  padding: 10px 10px; 
-  margin: 80%;
+.login-painel{ /* Painel de login */
+  height: 300px;
 }
 
 /*===== TELEMOVEL =====*/
